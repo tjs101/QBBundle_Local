@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QBBundle_Local"
-  s.version      = "1.0.0.2"
+  s.version      = "1.0.0.3"
   s.summary      = "内部切换国际化."
   s.author             = { "tjs101" => "tjs101@live.cn" }
   s.description  = "国际化."
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "", :tag => "#{s.version}" }
-  s.resources = "QBFramework_IOS/QBBundle.bundle"
+  s.source_files = "QBBundle_Local/*.{h,m}"
 
 
 end

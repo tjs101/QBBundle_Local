@@ -16,15 +16,15 @@ static NSString *const QBLanguageKey = @"AppLanguagesKey";
 
 @implementation BundleLanguage
 
-//- (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value table:(NSString *)tableName {
-//
-//    NSString *currentLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:QBLanguageKey];
-//    currentLanguage = currentLanguage ? currentLanguage : @"zh-Hans";
-//
-//    NSBundle *currentLanguageBundle = currentLanguage ? [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:currentLanguage ofType:@"lproj"]] : nil;
-//
-//    return currentLanguageBundle ? [currentLanguageBundle localizedStringForKey:key value:value table:tableName] : [super localizedStringForKey:key value:value table:tableName];
-//}
+- (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value table:(NSString *)tableName {
+
+    NSString *currentLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:QBLanguageKey];
+    currentLanguage = currentLanguage ? currentLanguage : @"zh-Hans";
+
+    NSBundle *currentLanguageBundle = currentLanguage ? [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:currentLanguage ofType:@"lproj"]] : nil;
+
+    return currentLanguageBundle ? [currentLanguageBundle localizedStringForKey:key value:value table:tableName] : [super localizedStringForKey:key value:value table:tableName];
+}
 
 @end
 
